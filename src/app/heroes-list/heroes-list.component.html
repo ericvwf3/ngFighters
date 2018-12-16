@@ -1,6 +1,7 @@
 <ul class="list-group">
 
-  <app-hero></app-hero>
-  <app-hero></app-hero>
+  <app-hero *ngFor= "let currentHero of heroes; let i = index"
+            [hero]  ="currentHero"
+            [index] = "i"></app-hero>
 
 </ul>
