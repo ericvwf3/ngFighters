@@ -1,3 +1,24 @@
-<h1>WF3 Heroes <small>A game about WF3 and Heroes</small></h1>
 
-<app-heroes-list></app-heroes-list>
+<div class="container">
+
+  <h1>WF3 Heroes <small>A game about WF3 and Heroes</small></h1>
+
+  <h3>Règles du jeu :</h3>
+    <ul>
+      <li>Lorsque l'on <strong>envoie au combat</strong> un personnage, on génère un monstre avec une attaque et une défense.</li>
+      <li>Si attaque du monstre > défense du personnage, on déduit des points de vie du personnage.</li>
+      <li>Si le personnage tue le monstre, il gagne 100 points d'expérience.</li>
+      <li>Si le personnage meurt, ses points d'expérience tombent à 0.</li>
+      <li>Si le personnage se repose, il perd 100 points d'expérience mais gagne 1 point de vie.</li>
+      <li>Si le personnage gagne 1000 points d'expérience, il regagne tous ses points de vie et gagne 1 point de vie max.</li>
+    </ul>
+
+  <div class="row">
+    <div class="col-sm-12">
+
+      <app-heroes-list></app-heroes-list>
+
+    </div>
+  </div>
+
+</div>
