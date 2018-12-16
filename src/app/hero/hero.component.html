@@ -3,7 +3,7 @@
                 'list-group-item-danger': !hero.in_battle
               }">
 
-  <h3>{{hero.name}} : {{heroStatus(hero.in_battle)}} <span class="float-right">Points de vie : {{ hero.life }}</span></h3>
+  <h3>{{hero.name}} : {{heroStatus(hero.in_battle)}} <span class="float-right">Points de vie : {{ hero.life }}/{{ hero.max_life }}</span></h3>
 
 
   <ul class="list-group">
@@ -21,7 +21,7 @@
     </li>
   </ul>
 
-  <button class="btn btn-sm btn-success">Envoyer au combat</button>
-  <button class="btn btn-sm btn-primary">Se reposer</button>
+  <button class="btn btn-sm btn-success" (click)="onCombat()">Envoyer au combat</button>
+  <button class="btn btn-sm btn-primary" (click)="onRest()">Se reposer</button>
 
 </li>

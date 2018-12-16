@@ -9,7 +9,7 @@ import { HeroService } from '../services/hero.service';
 export class HeroComponent implements OnInit {
 
   @Input() hero: Object;
-  @Input() index: Number;
+  @Input() index: number;
 
   constructor(private heroService: HeroService) { }
 
@@ -30,4 +30,11 @@ export class HeroComponent implements OnInit {
     }
   }
 
+  onCombat() {
+    this.heroService.combat(this.index);
+  }
+
+  onRest() {
+    this.heroService.rest(this.index);
+  }
 }
