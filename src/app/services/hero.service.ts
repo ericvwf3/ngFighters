@@ -3,6 +3,7 @@ export class HeroService {
     heroes = [
         {
             name: 'Batman & Robin',
+            in_battle: false,
             life: 10,
             strengh: 11,
             defence: 9,
@@ -10,6 +11,7 @@ export class HeroService {
         },
         {
             name: 'Superman',
+            in_battle: false,
             life: 12,
             strengh: 9,
             defence: 10,
@@ -18,6 +20,7 @@ export class HeroService {
 
         {
             name: 'Felix The Cat',
+            in_battle: false,
             life: 7,
             strengh: 13,
             defence: 6,
