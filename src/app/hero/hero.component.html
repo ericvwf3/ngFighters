@@ -3,7 +3,7 @@
                 'list-group-item-danger': !hero.in_battle
               }">
 
-  <h3>{{hero.name}} : {{heroStatus(hero.in_battle)}} <span class="float-right">Points de vie : {{ hero.life }}/{{ hero.max_life }}</span></h3>
+  <h3>{{hero.name}} : {{heroStatus(hero.in_battle)}} <span class="float-right">Points de vie : {{ hero.life }}/{{ hero.max_life }} - Niveau : {{ hero.level }}</span></h3>
 
 
   <ul class="list-group">
@@ -13,7 +13,7 @@
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-center">
       Défense
-      <span class="badge badge-primary badge-pill">{{ hero.defence }}</span>
+      <span class="badge badge-primary badge-pill">{{ hero.defense }}</span>
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-center">
       Expérience
