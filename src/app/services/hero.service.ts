@@ -92,6 +92,9 @@ export class HeroService {
             } else {
                 return false;
             }
+
+        } else {
+            alert(this.heroes[index].name + ' ne peut pas se reposer, il n\'a plus d\'expérience !');
         }
     }
 
