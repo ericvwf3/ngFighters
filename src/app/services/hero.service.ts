@@ -8,7 +8,8 @@ export class HeroService {
             max_life: 10,
             strengh: 11,
             defence: 9,
-            experience: 300
+            experience: 300,
+            level: 0
         },
         {
             name: 'Superman',
@@ -17,7 +18,8 @@ export class HeroService {
             max_life: 12,
             strengh: 9,
             defence: 10,
-            experience: 0
+            experience: 0,
+            level: 0
         },
 
         {
@@ -27,14 +29,34 @@ export class HeroService {
             max_life: 7,
             strengh: 13,
             defence: 6,
-            experience: 0
+            experience: 0,
+            level: 0
         }
     ];
 
     restCost: Number = 100;
 
 
-    combat(index: number) {}
+    combat(index: number) {
+
+        // Cas où le héros n'a plus de PV mais a encore de l'XP pour se soigner => doit se reposer
+
+        // Cas où le héros n'a plus de PV et plus de XP pour se soigner => mort
+
+        // Sinon, on combat
+
+        /**
+         * Combat
+         */
+
+        // On génère un monstre selon le niveau du héros
+
+        // On effectue le combat
+
+        // On accorde de l'expérience au héros
+
+        // On gère la montée de niveau le cas échéant
+    }
 
     rest(index: number) {
 
