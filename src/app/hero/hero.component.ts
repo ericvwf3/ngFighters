@@ -16,4 +16,18 @@ export class HeroComponent implements OnInit {
   ngOnInit() {
   }
 
+  heroStatus(heroInBattle: Boolean) {
+    switch (heroInBattle) {
+      case false:
+        return 'Se repose';
+        break;
+
+      case true:
+        return 'En combat';
+        break;
+      default:
+        return false;
+    }
+  }
+
 }

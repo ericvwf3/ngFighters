@@ -11,7 +11,7 @@ export class HeroService {
         },
         {
             name: 'Superman',
-            in_battle: false,
+            in_battle: true,
             life: 12,
             strengh: 9,
             defence: 10,
