@@ -25,7 +25,7 @@ export class HeroService {
         {
             name: 'Felix The Cat',
             in_battle: false,
-            life: 7,
+            life: 0,
             max_life: 7,
             strengh: 13,
             defence: 6,
@@ -40,9 +40,19 @@ export class HeroService {
     combat(index: number) {
 
         // Cas où le héros n'a plus de PV mais a encore de l'XP pour se soigner => doit se reposer
-        if (this.heroes[index].life <= 0 && this.heroes[index].experience >= this.restCost) {
-            alert(this.heroes[index].name + ' doit se reposer avant de combattre !');
+        if (this.heroes[index].life <= 0) {
+
+            if (this.heroes[index].experience >= this.restCost) {
+                alert(this.heroes[index].name + ' doit se reposer avant de combattre !');
+
+            } else {
+                alert(this.heroes[index].name + ' est KO, il ne pourra plus combattre :(');
+
+            }
+
+            return false;
         }
+
         // Cas où le héros n'a plus de PV et plus de XP pour se soigner => mort
 
         // Sinon, on combat
