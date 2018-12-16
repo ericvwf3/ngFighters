@@ -14,11 +14,11 @@ export class HeroService {
         {
             name: 'Superman',
             in_battle: true,
-            life: 12,
+            life: 0,
             max_life: 12,
             strengh: 9,
             defence: 10,
-            experience: 0,
+            experience: 200,
             level: 0
         },
 
@@ -40,7 +40,9 @@ export class HeroService {
     combat(index: number) {
 
         // Cas où le héros n'a plus de PV mais a encore de l'XP pour se soigner => doit se reposer
-
+        if (this.heroes[index].life <= 0 && this.heroes[index].experience >= this.restCost) {
+            alert(this.heroes[index].name + ' doit se reposer avant de combattre !');
+        }
         // Cas où le héros n'a plus de PV et plus de XP pour se soigner => mort
 
         // Sinon, on combat
